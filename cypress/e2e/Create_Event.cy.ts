@@ -79,11 +79,11 @@ describe('Create Event Page Novo.Fractal', () => {
         //reminder
         cy.get('button[nz-button][nztype="primary"]').contains('Add Reminder').click();
         cy.get('nz-input-number[formcontrolname="reminder_days_before"]').type('2');
-        cy.get('button.ant-btn.ant-btn-p(rimary').contains('Save').click;
+        cy.get('button.ant-btn.ant-btn-primary').contains('Save').scrollIntoView().click();
 
         //Save Event
         cy.contains('button', 'Save').click();
         //Verify Event Created
         cy.contains('td.ant-table-cell', 'EV_2025_07_162').should('exist');
     });
-})
+}) 
